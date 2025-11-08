@@ -292,6 +292,30 @@ const PROJECT_SKILLS = {
     fg: "white",
     icon: <SiArduino/>,
   },
+  figma: {
+    title: "Figma",
+    bg: "black",
+    fg: "white",
+    icon: <span style={{fontSize: '24px'}}>🎨</span>,
+  },
+  blender: {
+    title: "Blender",
+    bg: "black",
+    fg: "white",
+    icon: <span style={{fontSize: '24px'}}>🎬</span>,
+  },
+  powerbi: {
+    title: "Power BI",
+    bg: "black",
+    fg: "white",
+    icon: <span style={{fontSize: '24px'}}>📊</span>,
+  },
+  adobe: {
+    title: "Adobe Creative Suite",
+    bg: "black",
+    fg: "white",
+    icon: <span style={{fontSize: '24px'}}>✨</span>,
+  },
 };
 export type Project = {
   id: string;
@@ -768,304 +792,254 @@ const projects: Project[] = [
   //   },
   // },
 
-  // +
-  { // 01. AI Docker file optimizer project
-    id: "aidockerfileoptimizer",
-    category: "AI and DevOps",
-    title: "AI Dockerfile Optimizer",
-    src: "/assets/projects-screenshots/aidockerfileoptimizer/2.png",
-    screenshots: ["1.png", "2.png", "3.png"],
-    live: "https://ai-docker-file-optimizer.netlify.app/",
-    github:"https://github.com/Abhiz2411/AI-Docker-file-optimizer",
+  // Projects from Aditya Khaire's CV
+  { // 01. TEMD Python Library
+    id: "temd-python-library",
+    category: "Python Library",
+    title: "TEMD - AI-based Python Library",
+    src: "/assets/projects-screenshots/temd/01.png", // TODO: Add screenshot
+    screenshots: ["01.png"], // TODO: Add screenshots
+    live: "https://pypi.org/project/temd/",
+    github: "https://github.com/AdityaKhaire45/temd", // TODO: Update with actual repo if different
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [PROJECT_SKILLS.openai,PROJECT_SKILLS.netlify],
+      frontend: [],
+      backend: [PROJECT_SKILLS.python],
     },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            AI-Docker-file-optimizer helps optimize Dockerfiles for smaller, more efficient images. 
-            Simply paste your Dockerfile, and the app analyzes it for best practices and size 
-            optimization tips. It then provides a refactored, optimized version of the Dockerfile. 
-            Deployed on Vercel, it ensures fast and easy access to Dockerfile optimization.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/aidockerfileoptimizer/1.png`,
-              `${BASE_PATH}/aidockerfileoptimizer/2.png`,
-              `${BASE_PATH}/aidockerfileoptimizer/3.png`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
-  { // 02. FinanceMe project
-    id: "financeme",
-    category: "DevOps in Banking and Finance",
-    title: "FinanceMe: Complete DevOps Capstone Project",
-    src: "/assets/projects-screenshots/financeme/1.png",
-    screenshots: ["/assets/projects-screenshots/financeme/1.png"],
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.html,
-        PROJECT_SKILLS.css,
-        PROJECT_SKILLS.js,
-        PROJECT_SKILLS.bootstrap,
-      ],
-      backend: [
-        PROJECT_SKILLS.java,
-        PROJECT_SKILLS.maven,
-        PROJECT_SKILLS.postgres,
-      ],
-    },
-    live: "https://github.com/Abhiz2411/FinanceMe-Devops-Project-01",
-    github: "https://github.com/Abhiz2411/FinanceMe-Devops-Project-01",
     get content() {
       return (
         <div>
           <TypographyP className="font-mono text-2xl text-center">
-            FinanceMe: Complete DevOps Capstone Project
+            TEMD - AI-based Python Library on PyPI
           </TypographyP>
           <TypographyP className="font-mono ">
-            This project demonstrates the deployment of a DevOps pipeline for a global banking and
-            financial services provider, FinanceMe. The company transitioned from a monolithic 
-            architecture to a microservice-based architecture to handle increased traffic and 
-            scaling challenges. The project involves automating infrastructure provisioning, build 
-            and deployment processes, and continuous monitoring using modern DevOps tools and 
-            AWS services.?
+            Created and published TEMD — an AI-based Python library on PyPI. Developed entirely 
+            by myself using Python, this library is available publicly on PyPI, allowing easy 
+            installation via <code className="bg-zinc-800 px-2 py-1 rounded">pip install temd</code>. 
+            A testament to my Python development skills and ability to create reusable, 
+            publishable software packages.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Architecture </TypographyH3>
-          <p className="font-mono mb-2">
-            The project is divided into three main phases:
-            1.Automating Infrastructure Provisioning
-            2.Build and Deployment Automation
-            3.Continuous Monitoring
-          </p>
-          <SlideShow
+          <TypographyH3 className="my-4 mt-8">Features</TypographyH3>
+          <ul className="list-disc ml-6 font-mono mb-4">
+            <li>AI-powered functionality</li>
+            <li>Easy installation via pip</li>
+            <li>Publicly available on PyPI</li>
+            <li>Well-documented Python package</li>
+          </ul>
+          {/* TODO: Add screenshots when available */}
+          {/* <SlideShow
             images={[
-              `${BASE_PATH}/financeme/1.png`,
-              `${BASE_PATH}/financeme/2.png`,
+              `${BASE_PATH}/temd/01.png`,
             ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Automating Infrastructure Provisioning</TypographyH3>
-          <p className="font-mono mb-2">
-          Terraform is used to create 4 AWS EC2 instances:
-            Jenkins Master Node (for CI/CD pipeline management)
-            Build Server (for application and Docker image builds)
-            Production Server (for deploying Dockerized applications)
-            Monitoring Server (for continuous monitoring of Build and Prod servers)
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/4_A.png`,
-              `${BASE_PATH}/financeme/4.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Build and Deployment Automation</TypographyH3>
-
-          <p className="font-mono mb-2">
-          Jenkins is configured for a CI/CD pipeline:
-            Jenkins Master Node is responsible for pipeline orchestration.
-            Build Server is configured as a Jenkins Slave Node to handle application builds and Docker image creation.
-            Ansible is used for automating deployment to the Prod server, where the application is deployed using an Ansible client-server model.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/5.png`,
-              `${BASE_PATH}/financeme/6.png`,
-              `${BASE_PATH}/financeme/7.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Continuous Monitoring </TypographyH3>
-          <p className="font-mono mb-2">
-          Prometheus and Grafana are used for real-time monitoring:
-            Node Exporter is installed on both Build and Prod servers to collect server metrics (CPU, Disk Space, Memory Utilization).
-            Grafana Dashboard is created to visualize these metrics for continuous monitoring.
-          </p>
-          <SlideShow images={[
-                `${BASE_PATH}/financeme/3.png`,
-                `${BASE_PATH}/financeme/8.png`,
-                `${BASE_PATH}/financeme/9.png`,
-                `${BASE_PATH}/financeme/10.png`,
-            ]} />
+          /> */}
         </div>
       );
     },
   },
-  { // 03. Portfolio project
-    id: "portfolio",
-    category: "Portfolio",
-    title: "My Portfolio",
-    src: "/assets/projects-screenshots/myportfolio/landing.png",
-    screenshots: ["assets/projects-screenshots/myportfolio/landing.png"],
-    live: "https://www.abhijitzende.com/",
-    github:"https://github.com/Abhiz2411/3D-interactive-portfolio",
+  { // 02. Food Delivery App UI
+    id: "food-delivery-app-ui",
+    category: "UI/UX Design",
+    title: "Food Delivery App UI - Case Study",
+    src: "/assets/projects-screenshots/fooddelivery/01.png", // TODO: Add screenshot
+    screenshots: ["01.png", "02.png", "03.png"], // TODO: Add screenshots
+    live: "#", // TODO: Add Figma/Behance link
+    github: undefined,
     skills: {
-      frontend: [
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.shadcn,
-        PROJECT_SKILLS.aceternity,
-        PROJECT_SKILLS.framerMotion,
-        PROJECT_SKILLS.tailwind,
-        PROJECT_SKILLS.spline,
-      ],
+      frontend: [PROJECT_SKILLS.figma],
+      backend: [],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono text-2xl text-center">
+            Complete UX Journey from Wireframe to Prototype
+          </TypographyP>
+          <TypographyP className="font-mono ">
+            A complete UX case study for a Food Delivery App, showcasing the entire design process 
+            from initial wireframes to interactive prototype. Designed in Figma with interactive flows, 
+            this project demonstrates my expertise in user experience design, information architecture, 
+            and creating seamless user journeys for mobile applications.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Design Process</TypographyH3>
+          <p className="font-mono mb-2">
+            • User research and persona development<br/>
+            • Wireframing and information architecture<br/>
+            • Visual design and prototyping<br/>
+            • Interactive flows and user testing
+          </p>
+          {/* TODO: Add screenshots when available */}
+          {/* <SlideShow
+            images={[
+              `${BASE_PATH}/fooddelivery/01.png`,
+              `${BASE_PATH}/fooddelivery/02.png`,
+              `${BASE_PATH}/fooddelivery/03.png`,
+            ]}
+          /> */}
+        </div>
+      );
+    },
+  },
+  { // 03. 3D Product Ad
+    id: "3d-product-ad",
+    category: "3D & Animation",
+    title: "3D Product Ad - Blender & After Effects",
+    src: "/assets/projects-screenshots/3dproductad/01.png", // TODO: Add screenshot
+    screenshots: ["01.png"], // TODO: Add screenshot/video
+    live: "#", // TODO: Add video link (YouTube/Vimeo)
+    github: undefined,
+    skills: {
+      frontend: [PROJECT_SKILLS.blender, PROJECT_SKILLS.adobe],
       backend: [],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            Welcome to my digital playground, where creativity meets code in the
-            dopest way possible.
+            Created a stunning 30-second animated product showcase using Blender and After Effects. 
+            This project features professional lighting, camera animation, and rendering techniques 
+            to create an engaging product advertisement. Demonstrates my skills in 3D modeling, 
+            animation, motion graphics, and post-production.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">
-            Beautiful 3D Objects{" "}
-          </TypographyH3>
+          <TypographyH3 className="my-4 mt-8">Techniques Used</TypographyH3>
           <p className="font-mono mb-2">
-            Did you see that 3D keyboard modal? Yeah! I made that. That
-            interactive keyboard is being rendered in 3D on a webpage 🤯, and
-            pressing each keycap reveals a skill in a goofy way. It&apos;s like
-            typing, but make it art.
+            • 3D modeling and texturing in Blender<br/>
+            • Professional lighting setup<br/>
+            • Camera animation and cinematography<br/>
+            • Motion graphics in After Effects<br/>
+            • Rendering and post-production
           </p>
-          <SlideShow
+          {/* TODO: Add screenshot/video when available */}
+          {/* <SlideShow
             images={[
-              `${BASE_PATH}/myportfolio/landing.png`,
-              `${BASE_PATH}/portfolio/skills.png`,
+              `${BASE_PATH}/3dproductad/01.png`,
             ]}
-          />
-          <TypographyH3 className="my-4 ">Space Theme</TypographyH3>
-          <p className="font-mono mb-2">
-            Dark background + floating particles = out-of-this-world cool.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/myportfolio/navbar.png`]} />
-          <TypographyH3 className="my-4 mt-8">Projects</TypographyH3>
-
-          <p className="font-mono mb-2">
-            My top personal and freelance projects — no filler, all killer.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/myportfolio/projects.png`,
-              `${BASE_PATH}/myportfolio/project.png`,
-            ]}
-          />
-          <p className="font-mono mb-2 mt-8 text-center">
-            This site&apos;s not just a portfolio — it&apos;s a whole vibe.
-          </p>
+          /> */}
         </div>
       );
     },
   },
-  { // 04. Smart parking assitant
-    id: "smartparkingassitant",
-    category: "IoT",
-    title: "Smart Parking Assistant",
-    src: "/assets/projects-screenshots/smartparkingassitant/01.jpeg",
-    screenshots: ["01.jpeg", "03.png"],
-    live: "https://github.com/Abhiz2411/smart-parking-assistant",
-    github:"https://github.com/Abhiz2411/smart-parking-assistant",
+  { // 04. Power BI Dashboard
+    id: "power-bi-dashboard",
+    category: "Data Visualization",
+    title: "Power BI Dashboard - Sales Insights",
+    src: "/assets/projects-screenshots/powerbi/01.png", // TODO: Add screenshot
+    screenshots: ["01.png", "02.png"], // TODO: Add screenshots
+    live: "#", // TODO: Add Power BI report link if public
+    github: undefined,
     skills: {
-      frontend: [PROJECT_SKILLS.python],
-      backend: [PROJECT_SKILLS.cplusplus, PROJECT_SKILLS.arduino],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Transform parking with the Smart Parking Assistant, an IoT marvel powered by Arduino 
-            and IR sensors to detect and recommend the best spots in real-time. Enjoy a sleek GUI 
-            that visualizes availability and an intelligent system for quick, optimal decisions. 
-            Built to adapt with customizable hardware and Python-powered software for seamless 
-            integration. Say goodbye to parking woes and hello to smarter space utilization!
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/smartparkingassitant/01.jpeg`,
-              `${BASE_PATH}/smartparkingassitant/03.png`,
-              `${BASE_PATH}/smartparkingassitant/04.jpg`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
-  { // 05. Smart Job Tracker project
-    id: "smartjobtracker",
-    category: "Full stack",
-    title: "Smart Job Tracker",
-    src: "/assets/projects-screenshots/smartjobtracker/02.png",
-    screenshots: ["01.png", "02.png", "03.png","04.png","05.png","06.png","07.png"],
-    live: "https://job-tracker-application-eight.vercel.app/",
-    github:"https://github.com/Abhiz2411/Job-tracker-application",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [PROJECT_SKILLS.firebase],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Track your job applications effortlessly with a sleek, dark-themed app that lets you 
-            manage, filter, and visualize your job search. Organize your applications with a 
-            Kanban board, monitor progress through status updates, and store everything securely. 
-            Enjoy seamless access across devices with a responsive design and email reminders for 
-            interviews. A smarter, more intuitive way to stay on top of your job hunt!
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/smartjobtracker/01.png`,
-              `${BASE_PATH}/smartjobtracker/02.png`,
-              `${BASE_PATH}/smartjobtracker/03.png`,
-              `${BASE_PATH}/smartjobtracker/04.png`,
-              `${BASE_PATH}/smartjobtracker/05.png`,
-              `${BASE_PATH}/smartjobtracker/06.png`,
-              `${BASE_PATH}/smartjobtracker/07.png`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
-  { // 06. Savinder Puri portfolio project
-    id: "savinderpurisportfolio",
-    category: "Web Development",
-    title: "Savinder Puri Portfolio",
-    src: "/assets/projects-screenshots/savinderpuriportfolio/01.png",
-    screenshots: ["01.png", "02.png", "03.png","04.png","05.png"],
-    live: "https://savinder-puri.vercel.app/",
-    github:"https://github.com/Abhiz2411/savinder-puri",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
+      frontend: [PROJECT_SKILLS.powerbi],
       backend: [],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            Step into the digital world of Savinder Puri, the beloved DevOps guru and Spiritual 
-            Alchemist, with this responsive portfolio website. 🌐✨ Explore his inspiring journey, 
-            milestones, and life-changing services blending tech and spirituality. Built with 
-            modern tools like React and TypeScript, it’s a heartfelt tribute to a mentor who 
-            transforms lives. 💻🕊️ Crafted with ❤️ by Abhijit Zende! 🚀
+            Built an interactive dashboard using Power BI for analyzing sales data of an 
+            e-commerce company. Features include interactive slicers, conditional formatting, 
+            and comprehensive data insights. Demonstrates my ability to transform raw data 
+            into actionable business intelligence through effective data visualization.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
+          <TypographyH3 className="my-4 mt-8">Dashboard Features</TypographyH3>
+          <p className="font-mono mb-2">
+            • Interactive data visualization<br/>
+            • Custom slicers and filters<br/>
+            • Conditional formatting<br/>
+            • Sales trend analysis<br/>
+            • Key performance indicators (KPIs)
+          </p>
+          {/* TODO: Add screenshots when available */}
+          {/* <SlideShow
             images={[
-              `${BASE_PATH}/savinderpuriportfolio/01.png`,
-              `${BASE_PATH}/savinderpuriportfolio/02.png`,
-              `${BASE_PATH}/savinderpuriportfolio/03.png`,
-              `${BASE_PATH}/savinderpuriportfolio/04.png`,
-              `${BASE_PATH}/savinderpuriportfolio/05.png`,
+              `${BASE_PATH}/powerbi/01.png`,
+              `${BASE_PATH}/powerbi/02.png`,
             ]}
-          />
+          /> */}
+        </div>
+      );
+    },
+  },
+  { // 05. 3D Architectural Walkthrough
+    id: "3d-architectural-walkthrough",
+    category: "3D & Architecture",
+    title: "3D Architectural Walkthrough",
+    src: "/assets/projects-screenshots/3darch/01.png", // TODO: Add screenshot
+    screenshots: ["01.png", "02.png", "03.png"], // TODO: Add screenshots
+    live: "#", // TODO: Add video link
+    github: undefined,
+    skills: {
+      frontend: [PROJECT_SKILLS.blender, PROJECT_SKILLS.adobe],
+      backend: [],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            Designed interior and exterior 3D models using Blender and rendered walkthrough 
+            animations for a real-estate project client. This project showcases my expertise 
+            in architectural visualization, 3D modeling, texturing, lighting, and animation 
+            for the real estate industry.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Project Highlights</TypographyH3>
+          <p className="font-mono mb-2">
+            • Interior and exterior 3D modeling<br/>
+            • Realistic texturing and materials<br/>
+            • Professional lighting setup<br/>
+            • Camera walkthrough animation<br/>
+            • High-quality rendering for client presentation
+          </p>
+          {/* TODO: Add screenshots when available */}
+          {/* <SlideShow
+            images={[
+              `${BASE_PATH}/3darch/01.png`,
+              `${BASE_PATH}/3darch/02.png`,
+              `${BASE_PATH}/3darch/03.png`,
+            ]}
+          /> */}
+        </div>
+      );
+    },
+  },
+  { // 06. Social Media Post Generator
+    id: "social-media-post-generator",
+    category: "Automation",
+    title: "Social Media Post Generator",
+    src: "/assets/projects-screenshots/smpostgen/01.png", // TODO: Add screenshot
+    screenshots: ["01.png", "02.png"], // TODO: Add screenshots
+    live: "#", // TODO: Add demo link if available
+    github: "https://github.com/AdityaKhaire45/social-media-post-generator", // TODO: Update with actual repo
+    skills: {
+      frontend: [],
+      backend: [PROJECT_SKILLS.python],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            An automated tool that generates branded Instagram posts based on provided data 
+            and templates using Python and Canva API. This project demonstrates my ability 
+            to combine programming skills with design automation, creating efficient solutions 
+            for social media content creation.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Features</TypographyH3>
+          <p className="font-mono mb-2">
+            • Automated post generation<br/>
+            • Integration with Canva API<br/>
+            • Customizable templates<br/>
+            • Brand consistency<br/>
+            • Batch processing capability
+          </p>
+          {/* TODO: Add screenshots when available */}
+          {/* <SlideShow
+            images={[
+              `${BASE_PATH}/smpostgen/01.png`,
+              `${BASE_PATH}/smpostgen/02.png`,
+            ]}
+          /> */}
         </div>
       );
     },

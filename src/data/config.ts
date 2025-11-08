@@ -1,48 +1,41 @@
 const config = {
-  title: "Abhijit Zende | AI Enthusiast",
+  title: "Aditya Khaire | Software Engineer, UI/UX Designer & 3D Artist",
   description: {
-    long: "Explore the portfolio of Abhijit, a Computer Science Engineer with 1.5 year experience in Devlopment, DevOps & Database management with hands-on experience in deploying & automating workflows, & collaborating with foreign clients. Strong analytical skills, effective communication, and a team-oriented approach to driving process improvements and delivering results.",
+    long: "Creative and detail-oriented UI/UX Designer and 3D Artist with a strong foundation in visual storytelling, user interface design, and motion graphics. Passionate about transforming abstract ideas into elegant, user-friendly digital experiences and immersive visuals. Specialized in Figma, Blender, Adobe Creative Suite, and frontend development.",
     short:
-      "Discover the portfolio of Abhijit, a AI enthusiast solving real life problems in DevOps and Development.",
+      "Software Engineer, UI/UX Designer & 3D Artist creating elegant digital experiences and immersive visuals.",
   },
   keywords: [
-    "Abhijit",
-    "Abhijit Zende",
-    "abhijitzende",
-    "abhijitzende.com",
-    "Abhijit Zende portfolio",
+    "Aditya",
+    "Aditya Khaire",
+    "Aditya Dilip Khaire",
+    "adityakhaire",
+    "Aditya Khaire portfolio",
+    "UI/UX Designer",
+    "3D Artist",
+    "Figma",
+    "Blender",
+    "Frontend Developer",
     "portfolio",
-    "DevOps",
-    "Devlopment",
-    "Database",
-    "AI Docker file optimizer",
-    "Finance me",
-    "creative technologist",
-    "web development",
-    "interactive websites",
-    // "GSAP",
-    // "React",
-    // "Next.js",
-    // "Spline",
-    // "Framer Motion",
-    "AWS",
-    "DevSecOps",
-    "AIOps",
-    "Azure",
+    "creative designer",
+    "web design",
+    "motion graphics",
+    "3D modeling",
+    "user interface design",
   ],
-  author: "Abhijit Zende",
-  email: "abhijitzende75@gmail.com",
-  site: "https://abhijitzende.com",
+  author: "Aditya Khaire",
+  email: "adityakhaire@gmail.com",
+  site: "https://www.abhijitzende.com", // TODO: Update with your domain if different
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "https://x.com/_Abhi_Speaks/",
-    linkedin: "https://www.linkedin.com/in/zende-abhijit/",
-    instagram: "https://www.instagram.com/_.celestial_abhi._/",
-    facebook: "https://www.facebook.com/profile.php?id=100010029821759",
-    github: "https://github.com/Abhiz2411/",
+    twitter: "", // TODO: Add your Twitter/X profile if you have one
+    linkedin: "https://www.linkedin.com/in/aditya-khaire-ab109231a/",
+    instagram: "", // TODO: Add your Instagram if you have one
+    facebook: "", // TODO: Add your Facebook if you have one
+    github: "https://github.com/AdityaKhaire45",
   },
 };
 export { config };

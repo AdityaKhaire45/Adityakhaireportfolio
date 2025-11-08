@@ -43,26 +43,26 @@ import { TbTerminal2 } from "react-icons/tb";
 const CONTACT_LINKS = [
   {
     name: "Email",
-    content: "abhijitzende75@gmail",
-    href: "mailto:abhijitzende75@gmail.com",
+    content: "adityakhaire@gmail.com",
+    href: "mailto:adityakhaire@gmail.com",
     icon: <FaEnvelope height={"50px"} />,
   },
   {
     name: "Phone",
-    content: "1234567890",
-    href: "tel:8308509180",
+    content: "+91-9152025970",
+    href: "tel:+919152025970",
     icon: <FaPhone height={"50px"} />,
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/zende-abhijit/",
-    content: "/zende-abhijit",
+    href: "https://www.linkedin.com/in/aditya-khaire-ab109231a/",
+    content: "/aditya-khaire-ab109231a",
     icon: <FaLinkedin height={"50px"} />,
   },
   {
     name: "GitHub",
-    href: "https://github.com/Abhiz2411",
-    content: "/naresh-khatri",
+    href: "https://github.com/AdityaKhaire45",
+    content: "/AdityaKhaire45",
     icon: <FaGithub height={"50px"} />,
   },
 ];
@@ -251,9 +251,9 @@ function Page() {
                 />
               </div>
               <div className="flex flex-col gap-3 lg:items-center ml-10 md:ml-20 lg:ml-0">
-                <p className="text-center text-xl">Naresh Khatri</p>
+                <p className="text-center text-xl">Aditya Khaire</p>
                 <div className="text-xs bg-zinc-700 w-fit px-3 py-1 rounded-full">
-                  Web Developer
+                  Software Engineer, UI/UX Designer & 3D Artist
                 </div>
               </div>
             </div>
@@ -287,15 +287,23 @@ function Page() {
           >
             <h1 className="text-3xl mb-10 lg:md-20">About me</h1>
             <p className="mb-10 text-roboto">
-              Hey there! I&apos;m Abhijit, a Comp. Sci. Engineer with 1.5 year experience in Devlopment, DevOps and 
-              Database management with hands-on experience in deploying & automating workflows, and 
-              collaborating with foreign clients. Strong analytical skills,effective communication,
-              and a team-oriented approach to driving process improvements and delivering results.
+              Hey there! I&apos;m Aditya, a creative and detail-oriented UI/UX Designer and 3D Artist 
+              with a strong foundation in visual storytelling, user interface design, and motion graphics. 
+              Currently pursuing B.Tech in Computer Technology, I&apos;m passionate about transforming 
+              abstract ideas into elegant, user-friendly digital experiences and immersive visuals.
             </p>
             <p className="mb-10">
-              When I&apos;m not coding, you can find me [Your
-              Interests/Hobbies], exploring new technologies, or sipping coffee
-              while brainstorming my next project.
+              With experience in freelance UI/UX design and 3D artistry since 2023, I specialize in 
+              creating responsive websites, app interfaces, 3D mockups, animations, and brand creatives. 
+              My toolkit includes Figma, Adobe Creative Suite, Blender, and frontend technologies like 
+              HTML5, CSS3, and JavaScript. I also enjoy working with Python for automation and data 
+              visualization, and have published an AI-based library on PyPI.
+            </p>
+            <p className="mb-10">
+              When I&apos;m not designing, you can find me creating 3D architectural walkthroughs, 
+              building interactive dashboards with Power BI, or working on innovative projects that 
+              blend design with technology. I&apos;m always exploring new tools and techniques to 
+              push the boundaries of digital creativity.
             </p>
             <h1 className="text-3xl mb-10 lg:md-20">Stuff I use</h1>
             <div className="mb-5">

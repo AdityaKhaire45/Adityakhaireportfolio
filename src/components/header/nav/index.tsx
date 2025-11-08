@@ -42,10 +42,11 @@ const Index: React.FC<IndexProps> = ({ setIsActive }) => {
           />
           {/* <Footer /> */}
         </div>
-        <Image
+        {/* Temporarily disabled preview images - need to be replaced with new screenshots */}
+        {/* <Image
           src={links[selectedLink.index].thumbnail}
           isActive={selectedLink.isActive}
-        />
+        /> */}
         {/* <p>{links[selectedLink.index].thumbnail}</p> */}
       </div>
     </motion.div>
