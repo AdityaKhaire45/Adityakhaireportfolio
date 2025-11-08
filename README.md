@@ -1,4 +1,4 @@
-![Portfolio Preview](https://github.com/AdityaKhaire45/Adityakhaire-portfolio/blob/main/public/assets/seo/og-image.png?raw=true)
+
 
 # 🚀 Aditya Khaire's Portfolio Website
 
