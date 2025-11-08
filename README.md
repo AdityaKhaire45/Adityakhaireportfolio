@@ -97,6 +97,14 @@ This project is deployed using **Vercel** for its blazing-fast performance and e
 
 Note: Make sure to keep your API key secret and never commit it to your repository.
 
+## ⚠️ Required environment variables
+
+The following environment variables must be set for the site to build and for the contact email API to work:
+
+- `RESEND_API_KEY` — your Resend API key used by the serverless `/api/send` endpoint.
+
+Add these in your Vercel project settings (or in a local `.env.local` for development) before building or deploying.
+
 ## 💖 Acknowledgments
 
 A huge shoutout to [Naresh Khatri](https://github.com/Naresh-Khatri/Portfolio) for the inspiration and ideas that sparked this journey! 💡 If you're interested in creative web design, definitely check out his work.

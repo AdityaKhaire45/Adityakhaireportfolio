@@ -3,7 +3,11 @@ import { config } from "@/data/config";
 import { Resend } from "resend";
 import { z } from "zod";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResendInstance() {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) return null;
+  return new Resend(key);
+}
 
 const Email = z.object({
   fullName: z.string().min(2, "Full name is invalid!"),
@@ -21,6 +25,11 @@ export async function POST(req: Request) {
     } = Email.safeParse(body);
     if (!zodSuccess)
       return Response.json({ error: zodError?.message }, { status: 400 });
+
+    const resend = getResendInstance();
+    if (!resend) {
+      return Response.json({ error: "Missing RESEND_API_KEY environment variable" }, { status: 500 });
+    }
 
     const { data: resendData, error: resendError } = await resend.emails.send({
       from: "Porfolio <onboarding@resend.dev>",
